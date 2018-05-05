@@ -6,19 +6,14 @@ function onSubmit(e) {
   }
   var patientInfo = getValueFromJsonObjByKey(addedCallInfo, 'namedValues');
   
-  var email = getEmail(patientInfo);
+  var recipientEmail = getEmail(patientInfo);
   if (!email) {
-    return;
-  }
-  
-  var recipient = getRecipient(patientInfo);
-  if (!recipient) {
     return;
   }
   
   var msgDocId = '1B4BdnpxphDhqyCVWK7sPhJGrkcdUYq8DiPbgoAnHWyQ';
   var msg = getMessage(msgDocId);
-  sendMsgToEmail(recipient, msg);
+  sendMsgToEmail(recipientEmail, msg);
   
 }
 
