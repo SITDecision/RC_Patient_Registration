@@ -14,6 +14,7 @@ function onSubmit(e) {
   var msgDocId = '1B4BdnpxphDhqyCVWK7sPhJGrkcdUYq8DiPbgoAnHWyQ';
   var msg = getMessage(msgDocId);
   sendMsgToEmail(recipientEmail, msg);
+  Logger.log('email was successfullly sended to the ' + recipientEmail);
   
 }
 
