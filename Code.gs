@@ -1,11 +1,12 @@
 function onSubmit(e) {
+    updatePatientNameDropdownInForm();
     var newEntry = e;
     if (!(newEntry && newEntry.namedValues)) {
         Logger.log("added form can`be readed");
         throw new Error('Ошибка при получении данных с формы');
     }
     var patientInfo = getValueFromJsonObjByKey(newEntry, 'namedValues');
-
+    
     var recipientPhone = getRelativePhone(patientInfo);
     if (!recipientPhone) {
         return;
