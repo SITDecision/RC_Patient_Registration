@@ -11,8 +11,7 @@ function updatePatientNameDropdownInForm() {
 
     var patientNames = getUniquePatientNames(sheet);
     refreshDataOnForm(patientNames);
-
-
+    Logger.log('patients dropdown was filled for the payment form');
 }
 
 //private
